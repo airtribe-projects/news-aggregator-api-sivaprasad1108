@@ -1,0 +1,12 @@
+{
+  "clark@superman.com": {
+    "name": "Clark Kent",
+    "email": "clark@superman.com",
+    "password": "$2a$08$a55./2PrDGB50lBz7Rcu8.GrJ3k9XcubRTfek6cwc8mhNNj6c2YLq",
+    "preferences": [
+      "movies",
+      "comics",
+      "games"
+    ]
+  }
+}
