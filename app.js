@@ -1,17 +1,14 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+// Root wrapper: wire up modularized app from src and start server only when run directly
+const app = require('./src/app');
+const port = process.env.PORT || 3000;
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-app.listen(port, (err) => {
-    if (err) {
-        return console.log('Something bad happened', err);
-    }
-    console.log(`Server is listening on ${port}`);
-});
-
-
+if (require.main === module) {
+    app.listen(port, (err) => {
+        if (err) {
+            return console.log('Something bad happened', err);
+        }
+        console.log(`Server is listening on ${port}`);
+    });
+}
 
 module.exports = app;
